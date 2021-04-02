@@ -6,23 +6,24 @@
     <body>
         <h2>eelテスト</h2>
         <div class="">
-        CSVファイル<input id="csv_name"  type="text" placeholder="ファイルを入力" /><br/>
-        検索ワード<input id="search" type="text" required="入力してください" spellchech = "true" placeholder="検索" />
+        CSVファイル<input id="csv_name"  type="text" placeholder="ファイルを入力"></input><br/>
+        検索ワード<input id="word" type="text" required="入力してください" spellchech = "true" placeholder="検索" ></input>
         <button id ="search">検索</button><br/>
         </div>
-        <div>
             <textarea id ="result" class="log-view-area"></textarea>
         </div>
+
         <script type="text/javascript" src="./eel.js"></script>
         <script>
             search.addEventListener('click', () => {
-                eel.kimetsu_search(search_word.value,csv_name.value)
+                eel.kimetsu_search(word.value,csv_name.value)
             })
-
             eel.expose(view_log_js)
             function view_log_js(text){
-                result.value +- text +"\n"
+                result.value += text +"\n"
             }
         </script> 
+        
+        
     </body>
 </html>
