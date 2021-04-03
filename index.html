@@ -2,42 +2,27 @@
     <head>
         <title>検索</title>
         <link rel="stylesheet" href="./style.css">
-        
     </head>
     <body>
-    <h2>eelテスト</h2>
-    <div class="">
-    CSVファイル<input id="csv_name" name="CSV_name" type="text" placeholder="ファイルを入力"></input><br/>
-    検索ワード<input id="word" name="charactername" type="text" required="入力してください" spellchech = "true"placeholder="検索" ></input>
-    <button id ="search">検索</button><br/>
-    <script language="JavaScript">
-    <!--
-    function check() {
-        if(CSV_name.value == "") {
-            alert("ファイル名を記入してください");
-            return false;
-        }
-        if(charactername.value == "") {
-            alert("入力してください");
-            return false;
-        }
-    }
-         //-->
-    </script>
-    
-    </div>
-        <textarea id ="result" class="log-view-area"></textarea>
-    </div>
+        <h2>eelテスト</h2>
+        <div class="">
+            CSVファイル<input id="csv_name" name="CSV_name" type="text" placeholder="ファイルを入力"></input><br/>
+            検索ワード<input id="word" name="charactername" type="text" required="入力してください" spellchech = "true"placeholder="検索" ></input>
+            <button id ="search">検索</button><br/>
+        </div>
+        <div>
+            <textarea id ="result" class="log-view-area"></textarea>
+        </div>
 
-    <script type="text/javascript" src="./eel.js"></script>
-    <script>
-        search.addEventListener('click', () => {
-            eel.kimetsu_search(word.value,csv_name.value)
-        })
-        eel.expose(view_log_js)
-        function view_log_js(text){
-            result.value += text +"\n"
-        }
-    </script>   
+        <script type="text/javascript" src="./eel.js"></script>
+        <script>
+            search.addEventListener('click', () => {
+                eel.kimetsu_search(word.value,csv_name.value)
+            })
+            eel.expose(view_log_js)
+            function view_log_js(text){
+                result.value += text +"\n"
+            }
+        </script> 
     </body>
 </html>
