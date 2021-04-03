@@ -18,8 +18,9 @@
         </script>
     </head>
     <body>
+    <form name="filename">
         <h2>eelテスト</h2>
-        <div name ="filename" class="">
+        <div class="">
         CSVファイル<input id="csv_name" name="CSV_name" type="text" placeholder="ファイルを入力"></input><br/>
         検索ワード<input id="word" name="charactername" type="text" required="入力してください" spellchech = "true"placeholder="検索" ></input>
         <button id ="search">検索</button><br/>
@@ -36,6 +37,7 @@
             function view_log_js(text){
                 result.value += text +"\n"
             }
-        </script>       
+        </script> 
+    </form>   
     </body>
 </html>
